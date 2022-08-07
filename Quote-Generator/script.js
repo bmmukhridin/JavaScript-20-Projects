@@ -24,7 +24,6 @@ async function getQuotes() {
   } catch (error) {
     alert(error);
   }
-  
 }
 // onLoad
 getQuotes();
