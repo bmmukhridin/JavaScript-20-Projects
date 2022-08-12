@@ -16,4 +16,3 @@ async function getPhoto() {
 
 // On Load 
 getPhoto()
-console.log("hello")
