@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&family=Ubuntu&display=swap');
 
 :root {
   --primaryColor: #fff;
@@ -16,12 +16,62 @@ html {
 body {
   margin: 0;
   background: #000;
-
+  font-family: Montserrat sans-serif;
 }
 
 /* --- Navigation Menu ------------------------------ */
 
+/* Over Lay Menu */
+.over-lay {
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8)
+}
 
+/* Nav Menu Items */
+nav,
+nav ul {
+  width: 100wh;
+  margin: 0;
+  padding: 0;
+}
+
+
+nav li:nth-of-type(1) {
+  background-color: var(--navColor1);
+}
+
+nav li:nth-of-type(2) {
+  background-color: var(--navColor2);
+}
+
+nav li:nth-of-type(3) {
+  background-color: var(--navColor3);
+}
+
+nav li:nth-of-type(4) {
+  background-color: var(--navColor4);
+}
+
+nav li:nth-of-type(5) {
+  background-color: var(--navColor5);
+}
+
+nav ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  list-style: none;
+}
+
+nav ul li {
+  height: 20%;
+  overflow: hidden;
+}
 
 /* --- Menu Bars ------------------------------------ */
 
