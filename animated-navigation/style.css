@@ -35,7 +35,7 @@ body {
 /* Nav Menu Items */
 nav,
 nav ul {
-  width: 100wh;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -73,6 +73,34 @@ nav ul li {
   overflow: hidden;
 }
 
+nav li a{
+  position: relative;
+  top: 45%;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+nav li a:hover{
+  transform: scale(1.2)
+}
+
+nav li a::before{
+  content: '';
+  width: 25vw;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  top: 47.5%;
+  left: 0;
+  opacity: 0;
+}
+
+nav li a:hover::before{
+  opacity: 1;
+}
 /* --- Menu Bars ------------------------------------ */
 
 .menu-bars {
