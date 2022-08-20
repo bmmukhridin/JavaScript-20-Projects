@@ -13,9 +13,29 @@
     <div class="container" id="container">
         <h1>Sign Up Today!
         </h1>
-        <div id="form-container">
+        <!-- Full name -->
+        <div class="form-group">
             <label for="name">Full name</label>
-            <input type="text" id="name" required></input>
+            <input type="text" id="name" placeholder="Full Name" required></input>
+        </div>
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="email@address.com" required></input>
+        </div>
+        <!-- Phone Number -->
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="555-555-5555s" required></input>
+        </div>
+        <!-- web site -->
+        <div class="form-group">
+            <label for="website-url">Website URL</label>
+            <input type="url" id="website-url" placeholder="https://apple.com" required></input>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Create Password (min 8 characters)" required></input>
         </div>
     </div>
     <script src="script.js"></script>
