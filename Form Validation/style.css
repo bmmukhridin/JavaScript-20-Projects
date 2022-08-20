@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&family=Ubuntu&display=swap');
 
 * {
-    /* margin: 0;
-    padding: 0; */
+    /* margin: 0; */
+    padding: 0;
     box-sizing: border-box;
     font-family: Roboto Mono, sans-serif;
 }
@@ -24,4 +24,45 @@ body{
     background-color: white;
     border-radius: 5%;
     box-shadow: 0 5px 30px 10px rgba(0,0,0, 0.4);
+}
+
+/* Form */
+
+form{
+    width: 90%;
+}
+
+.form-group{
+    height: 65px;
+}
+
+label{
+    position: relative;
+    border: 3px;
+}
+
+input{
+    width: 100%;
+    height: 34px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    outline: none;
+    transition: 0.3s
+}
+
+input:valid{
+    border-color: green;
+}
+
+input:invalid{
+    border-color: red;
+}
+
+button{
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    width: 100%;
+    
 }
