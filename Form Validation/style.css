@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&family=Ubuntu&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Roboto Mono, sans-serif;
 }
-
+body{
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(239, 239, 239);
+}
