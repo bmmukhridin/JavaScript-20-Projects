@@ -13,6 +13,7 @@
     <div class="container" id="container">
         <h1>Sign Up Today!
         </h1>
+        <form action="">
         <!-- Full name -->
         <div class="form-group">
             <label for="name">Full name</label>
@@ -33,10 +34,21 @@
             <label for="website-url">Website URL</label>
             <input type="url" id="website-url" placeholder="https://apple.com" required></input>
         </div>
+        <!-- Password -->
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password" id="password" placeholder="Create Password (min 8 characters)" required></input>
         </div>
+        <!-- Confirm Password -->
+        <div class="form-group">
+            <label for="password2">Password</label>
+            <input type="password" id="password2" placeholder="Confirm Password" required></input>
+            <button type="submit">Register</button>
+        </div>
+    </form>
+    <div class="message-container">
+        <h3 id="message">Don't say Hello</h3>
+    </div>
     </div>
     <script src="script.js"></script>
 </body>
