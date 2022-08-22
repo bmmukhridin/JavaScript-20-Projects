@@ -37,7 +37,18 @@ body {
   position: fixed;
   top: 0;
 }
-
+.navigation{
+  display: flex;
+  justify-content: center;
+}
+.clicable{
+  margin: 0 15px 0 15px;
+  color: dodgerblue;
+  cursor: pointer;
+}
+.clicable:hover{
+  color: rgb(4, 95, 186);
+}
 .navigation-items {
   display: flex;
   justify-content: center;
