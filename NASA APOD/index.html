@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +10,34 @@
     <!-- ZTM Favicon -->
     <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
 </head>
+
 <body>
+    <!-- Loader -->
     <div class="loader hidden" id="loader">
         <img src="rocket.svg" alt="Rocket Loading Animation">
     </div>
-    <div class="header">
-        <nav class="navigation">
-            <span class="clicable">Favorites</span>
-            <span>•</span>
-            <span class="clicable">Load More Images</span>
+    <!-- Container -->
+    <div class="container">
+        <span class="background"></span>
+        <!-- Navigation -->
+        <nav class="navigation-container">
+            <span class="clicable" id="resultsNav" >
+                <h3>Favorites</h3>
+            </span>
+            <h3>•</h3>
+            <span class="clicable" id="resultsNav">
+                <h3>Load More Images</h3>
+            </span>
+            <span class="clicable" id="favoritesNav" hidden>
+                <h3 class="">Load More Images</h3>
+            </span>
         </nav>
     </div>
     <div class="main">
-        
+
     </div>
     <!-- Script -->
     <script src="script.js"></script>
 </body>
+
 </html>

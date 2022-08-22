@@ -1,9 +1,11 @@
 html {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  
   background: whitesmoke;
   overflow-x: hidden;
   font-family: Verdana, sans-serif;
@@ -34,12 +36,9 @@ body {
 }
 /* Navigation */
 .navigation-container {
-  position: fixed;
-  top: 0;
-}
-.navigation{
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 .clicable{
   margin: 0 15px 0 15px;
