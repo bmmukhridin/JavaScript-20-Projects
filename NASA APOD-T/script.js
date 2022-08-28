@@ -79,11 +79,13 @@ function getInfo(itemUrl) {
     if (item.url.includes(itemUrl)&& !favorites[itemUrl]) {
       favorites[itemUrl] = item;
       console.log(favorites);
+
       //show save Confirmation for 2 sec
       saveConfirmed.hidden = false;
       setTimeout(() => {
         saveConfirmed.hidden = true;
       }, 1800);
+      localStorage.setItem("nasaFavorites", JSON.stringify(favorites))
     }
   });
 }
