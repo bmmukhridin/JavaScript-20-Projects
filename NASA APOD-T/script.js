@@ -17,15 +17,17 @@ async function getImg() {
   try {
     const response = await fetch(urlApi);
     resultsArray = await response.json();
-    updateDOM();
+    updateDOM("favorites");
   } catch (error) {
-    alert(error);
+    console.log(error);
   }
 }
 
-function updateDOM() {
-  resultsArray.forEach((img) => {
-    const copyRightResult = img.copyright === undefined ? " " : img.copyright;
+function createDOMNodes(page){
+  const currentArray= page==="results"?resultsArray:Object.values(favorites)
+  console.log("curent array", page, currentArray)
+  currentArray.forEach((img) => {
+    const copyRightResult = img.copyright === undefined ? "" : img.copyright;
     //Card Container
     const card = document.createElement("div");
     card.classList.add("card");
@@ -50,8 +52,13 @@ function updateDOM() {
     ///Save text
     const saveText = document.createElement("p");
     saveText.classList.add("clicable");
-    saveText.textContent = "Add to Favorite";
+    if (page==="results") {
+      saveText.textContent = "Add to Favorite";
     saveText.setAttribute("onclick", `getInfo("${img.url}")`);
+    } else {
+      saveText.textContent = "Remove Favorite";
+    saveText.setAttribute("onclick", `removeInfo("${img.url}")`);
+    }
     //Card title
     const cardText = document.createElement("p");
     cardText.textContent = img.explanation;
@@ -72,6 +79,15 @@ function updateDOM() {
     imagesContainer.appendChild(card);
   });
 }
+
+function updateDOM(page) {
+  //get Favorites from local storage
+  if(localStorage.getItem("nasaFavorites")){
+    favorites=JSON.parse(localStorage.getItem("nasaFavorites"))
+    console.log(favorites)
+  }
+  createDOMNodes(page)
+}
 // add results to Favorite
 function getInfo(itemUrl) {
   // Loop
@@ -88,5 +104,8 @@ function getInfo(itemUrl) {
       localStorage.setItem("nasaFavorites", JSON.stringify(favorites))
     }
   });
+}
+function removeInfo(){
+  console.log("removed")
 }
 getImg();
