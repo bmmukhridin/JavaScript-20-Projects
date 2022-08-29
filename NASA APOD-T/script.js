@@ -60,7 +60,7 @@ function createDOMNodes(page) {
     cardBody.classList.add("card-body");
     //card title
     const cardTitle = document.createElement("h5");
-    cardTitle.classList.add("card-body");
+    cardTitle.classList.add("card-title");
     cardTitle.textContent = img.title;
     ///Save text
     const saveText = document.createElement("p");
