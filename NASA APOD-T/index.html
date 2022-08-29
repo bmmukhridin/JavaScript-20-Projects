@@ -22,14 +22,14 @@
             <!-- Navigation -->
             <nav class="navigation-container">
                 <span class="clicable" id="resultsNav">
-                    <h3>Favorites</h3>
+                    <h3 onclick="updateDOM('favorites')">Favorites</h3>
                 </span>
                 <h3>•</h3>
                 <span class="clicable" id="resultsNav">
-                    <h3>Load More Images</h3>
+                    <h3 onclick="getImg()">Load More Images</h3>
                 </span>
-                <span class="clicable" id="favoritesNav" hidden>
-                    <h3 class="">Load More Images</h3>
+                <span class="clicable" id="favoritesNav">
+                    <h3 class="" onclick="getImg()">Load More NASA Images</h3>
                 </span>
             </nav>
         </span>
