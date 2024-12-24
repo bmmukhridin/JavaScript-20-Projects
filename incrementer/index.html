@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incerementer</title>
+    <style>
+        #container {
+            text-align: center;
+            margin-top: 100px;
+        }
+        #value {
+            font-size: 50px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+    <div id="container">
+    <h1>Incrementer</h1>
+    <h1 id="value">0</h1>
+    <button id="increment" onclick="increment()">+</button>
+    <button id="reset" onclick="reset()">Reset</button>
+    <button id="decrement" onclick="decrement()">-</button>
+</div>
+    <script>
+        var v = document.getElementById('value');
+        var value = 0;
+        function increment() {
+            value++;
+            v.innerHTML = value;
+            if(value === 0){
+                v.style.color = 'black';
+            } else if(value > 0){
+                v.style.color = 'green';
+            } else {
+                v.style.color = 'red';
+            }
+        }
+        function decrement() {
+            value--;
+            v.innerHTML = value;
+            if(value === 0){
+                v.style.color = 'black';
+            } else if(value > 0){
+                v.style.color = 'green';
+            } else {
+                v.style.color = 'red';
+            }
+        }
+        function reset() {
+            value = 0;
+            v.innerHTML = value;
+            if(value === 0){
+                v.style.color = 'black';
+            } else if(value > 0){
+                v.style.color = 'green';
+            } else {
+                v.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
