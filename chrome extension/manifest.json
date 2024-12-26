@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Remove Options Extension",
+    "description": "Removes all options except those with value 1 and 3 in select dropdowns on the ShipStation Orders page.",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+            "matches": ["https://ss2.shipstation.com/*"],
+            "js": ["remove-options.js"],
+            "run_at": "document_idle"
+        }
+    ]
+}
